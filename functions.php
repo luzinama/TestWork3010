@@ -48,7 +48,7 @@ class TestWork {
     }
 
     public static function enqueue_admin_scripts($hook) {
-        if ( 'post.php' == $hook ) {
+        if ( 'post.php' === $hook || 'post-new.php' === $hook ) {
             if (get_post_type() === 'product') {
                 wp_enqueue_script( 'test-work-admin-scripts',
                     self::$theme_uri . '/assets/js/admin-scripts.js',

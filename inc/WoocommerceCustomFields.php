@@ -44,6 +44,7 @@ class WoocommerceCustomFields
         woocommerce_wp_text_input( array(
             'id'            => '_custom_product_image',
             'type'          => 'hidden',
+            'label'         => '',
             'value'         => get_post_meta( get_the_ID(), '_custom_product_image', true ),
             'data_type'     => 'url'
         ) );
